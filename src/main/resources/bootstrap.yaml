@@ -1,4 +1,7 @@
 spring:
+  devtools:
+    restart:
+      additional-paths: src/main/java
   application:
     name: planilla-service
   cloud:
@@ -10,5 +13,7 @@ spring:
     username: postgres
     password: 1234
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
