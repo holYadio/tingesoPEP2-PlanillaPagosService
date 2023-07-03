@@ -8,10 +8,15 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8081
+      fail-fast: true
+      retry:
+          max-attempts: 200
+          max-interval: 10000
   datasource:
-    url: jdbc:postgresql://localhost:5432/bdmicros
-    username: postgres
-    password: 1234
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
     hibernate:
