@@ -13,7 +13,7 @@ spring:
           max-attempts: 200
           max-interval: 10000
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}?autorReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
